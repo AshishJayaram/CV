@@ -1,30 +1,5 @@
 <style type="text/css">
 
-		nav {
-		  white-space: nowrap;
-		  background: #37474F;
-		}
-		nav ul {
-		  list-style: none;
-		  margin: 0;
-		  padding: 0;
-		}
-		/* Only stick if you can fit */
-		@media (min-height: 300px) {
-		  nav ul {
-		    position: sticky;
-		    top: 0;
-		  }
-		}
-		nav ul li a {
-		  display: block;
-		  padding: 0.5rem 1rem;
-		  color: white;
-		  text-decoration: none;
-		}
-		nav ul li a.current {
-		  background: black;
-		}
 		main {
 		  padding-bottom: 40rem;
 		}
@@ -42,8 +17,9 @@
 			padding: 50px;
 			position: absolute;
 		    bottom:0;
-		    
+		    height: auto;
 		    right: 38%;
+		    border-radius: 15px 0px 0px 0px;
 		}
 
 		@media only screen and (max-device-width: 1366px) {
@@ -52,19 +28,21 @@
 		    width: auto;
 		    position: all;
 		    right: 0;
-		    padding: 30px;
+		    padding: 5px 10px;
+		    font: 18px/30px Garamond;
+
 		}}
 
 		.intro{
 			
 			word-spacing: 1.5;
-			font: 18px/30px Georgia, serif;
+			font: 20px/30px Garamond;
 		}
 
 		.namer{
 			max-width: 500px;
 			word-spacing: 1.5;
-			font: 30px/50px Georgia, serif;
+			font: 30px/50px Garamond;
 		}
 		
 		.parallax1 {
@@ -95,7 +73,7 @@
 		.parallax1-image{
 			background: rgba(255, 255, 255, 0.2); 
 			backdrop-filter: blur(8px); 
-			height: 100vh;
+			height: 100%;
 			width: 62.1%;
 		}
 		@media only screen and (max-device-width: 1366px) {
@@ -107,7 +85,7 @@
 
 		.parallax2 {
 		  /* The image used */
-		  background-image: url('technology-785742_1920.jpg');
+		  background-image: url('school.png');
 
 		  /* Full height*/ 
 	
@@ -118,18 +96,23 @@
 		  background-repeat: no-repeat;
 		  background-size: auto;
 
+		  font-family: Garamond;
 		}
 
 		/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
 		@media only screen and (max-device-width: 1366px) {
 		  .parallax2 {
 		    background-attachment: scroll;
+		    background-position: center;
+		    background-attachment: fixed;
+		    background-repeat: no-repeat;
 		}}
 
 		.parallax3 {
 		  /* The image used */
-		  background-image: url('paral2.jpg');
+		  background-image: url('airplanes.png');
 
+		  background-color: white;
 		  /* Full height */
 		  height: auto; 
 
@@ -142,12 +125,17 @@
 		  background-position: center;
 		  background-repeat: no-repeat;
 		  background-size:auto;
+
+		  font-family: Garamond;
 		}
 
 		/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
 		@media only screen and (max-device-width: 1366px) {
 		  .parallax3 {
 		    background-attachment: scroll;
+		    background-position: center;
+		    background-attachment: fixed;
+		    background-repeat: no-repeat;
 		}}
 		
 		.parallax4 {
@@ -173,17 +161,16 @@
 		}}
 
 		.parallax3-image{
-			background: rgba(0, 0, 0, 0.1); 
-			backdrop-filter: blur(2px); 
+			backdrop-filter: blur(0px); 
 			height: auto;
 			width: all;
+			background-size:50%; 
 		}
 		.ed-image{
 			padding: 30px;
+			background-size: auto;
 		}
 		.ed-image:hover{
-			background: rgba(0, 0, 0, 0.1); 
-			backdrop-filter: blur(2px) grayscale(100%); 
 			height: auto;
 			width: all;
 			
@@ -206,7 +193,7 @@
 
 		body {
 		  background-color: #474e5d;
-		  font-family: Helvetica, sans-serif;
+		  font-family: Garamond;
 		  color: white;
 		  width: auto;
 		}
@@ -223,6 +210,8 @@
 		  	max-width: 1200px;
 		  	margin: 0 auto;
 		  	color: black;
+		  	font-family: Garamond;
+
 		}
 
 		/* The actual timeliner (the vertical ruler) */
@@ -230,11 +219,14 @@
 		  content: '';
 		  position: absolute;
 		  width: 6px;
-		  background-color: white;
+		  background-color: black;
 		  top: 0;
 		  bottom: 0;
 		  left: 50%;
 		  margin-left: -3px;
+
+		  border-color: cyan;
+		  border-width: 2px;
 		}
 
 		/* containers around content */
@@ -253,7 +245,7 @@
 		  height: 25px;
 		  right: -12.5px;
 		  background-color: white;
-		  border: 4px solid orange;
+		  border: 4px solid cyan;
 		  top: 15px;
 		  border-radius: 50%;
 		  z-index: 1;
@@ -278,9 +270,9 @@
 		  width: 0;
 		  z-index: 1;
 		  right: 30px;
-		  border: medium solid white;
+		  border: medium solid black;
 		  border-width: 10px 0 10px 10px;
-		  border-color: transparent transparent transparent white;
+		  border-color: transparent transparent transparent black;
 		}
 
 		/* Add arrows to the right containers (pointing left) */
@@ -292,9 +284,9 @@
 		  width: 0;
 		  z-index: 1;
 		  left: 30px;
-		  border: medium solid white;
+		  border: medium solid black;
 		  border-width: 10px 10px 10px 0;
-		  border-color: transparent white transparent transparent;
+		  border-color: transparent black transparent transparent;
 		}
 
 		/* Fix the circle for containerss on the right side */
@@ -309,6 +301,7 @@
 		  background-color: white;
 		  position: relative;
 		  border-radius: 6px;
+		  border: 2px solid black;
 		}
 
 		/* Media queries - Responsive timeliner on screens less than 600px wide */
@@ -346,9 +339,16 @@
 	
 		
 		.foot{
-			background-color: rgb(200,200,200);
+			background-image: url(foot.png);
+			background-attachment: fixed;
+			background-position: bottom;
+			font: 22px Garamond, bold;
 			height:auto; 
-			font:18px/30px Georgia, serif;;
+			padding: 0px 20px 20px 20px;
+		}
+
+		.foot p{
+			font-size: 20px;
 		}
 
 		.contact-feedback {
@@ -357,6 +357,7 @@
 			padding: 30px;
 			border-color: rgb(200,211,032);
 			border-width: 2px;
+
 		}
 
 		.contact-feedback > div {
@@ -365,13 +366,10 @@
 		}
 
 		.contact {
-			border-radius: 25px;
 			width: auto;
 			background-color: white;
-			padding: 20px;
-			right: 40%;
-			border-color: rgb(200,211,032);
-			border-width: 2px;
+			height: auto;
+			width: 400px;
 		}
 
 		.feedback {
@@ -386,7 +384,7 @@
 		.introcolumn {
 		  float: left;
 		  width: 33.33%;
-		  padding: 5px;
+		  height:auto;
 		}
 
 
@@ -395,6 +393,7 @@
 		  content: "";
 		  clear: both;
 		  display: table;
+		  height: auto;
 		}
 		
 		@media only screen and (max-device-width: 1366px) {
@@ -406,11 +405,12 @@
 
 		/* containers for flexboxes */
 		.row1 {
-		    background-color: rgb(0,0,0,.5);		
-		  	padding-top: 10px;
-		  	padding-bottom:  10px;
+		    background-color: black;
 		  	color: white;
-
+		 	border-radius: 25px;
+		  	width: ;
+		  	float: center;
+		  	font-weight: bold;
 		}
 		.row2 {
 			display: flex;
@@ -437,7 +437,7 @@
 		  background-size: cover;
 		  
 		  height: auto;
-		 min-height:300px;
+		  min-height:200px;
 		  width: auto; 
 		  overflow: hidden;
 		}
@@ -537,15 +537,31 @@
 		  height: 150px; 
 		}
 
-		.school3-info{
-			background-color: rgb(200,255,255,0.8);
+		.boxer{
+			background-color: rgb(0,0,0,0.5); 
+			padding: 10px 20px;
+			border-radius: 20px 0px;
+		}
 
+		.school3-info{
+			background-color: rgb(200,255,255,0.9);
 			border-radius: 15px;
 			height: =100%;
 			max-width: 300px;
 			color: black;
-			font: 17px serif;
+			font: 17px;
 			padding: 10px;
+		}
+
+		.school3-info p{
+			font-size: 18px;
+		}
+
+
+		@media only screen and (max-device-width: 1366px) {
+			.column1{
+				min-height: 200px;
+			}
 		}
 
 
@@ -559,34 +575,30 @@
 		 padding-top: 5px; 
 		}	
 
-		p.highlighter-head {
-		  width: 150px;
-		}
-		p.highlighter-subhead {
-		  width: 150px;
-		}
 
 		p.highlighter-head{
-		  background-color: black;
-		  color: white;
-		  border-radius: 25px;
-		  width: auto;
-		  float: left;
-		  font-weight: bold;
-		  padding: 0 15px 0 10px;
-		  margin: 4px -15px 4px 0px;
-		  font-size: 25px;
+			width: 150px;
+		  	background-color: rgb(0,0,0,0.8);
+		  	color: white;
+		  	border-radius: 10px;
+		  	border: solid black;
+		  	width: auto;
+		  	font-weight: bold;
+		  	padding: 0 15px 0 10px;
+		  	margin: 4px -15px 4px 0px;
+		  	font-size: 25px;
 		}
 
 		p.highlighter-subhead{
-		  background-color: cyan;
-		  color: #1d1d1e;
-		  border-radius: 25px;
-		  width: auto;
-		  float: left;
-		  padding: 0 15px 0 10px;
-		  margin: 4px -15px 4px 0px;
-		  font-size: 20px; 
+			width: 150px;
+		  	background-color: cyan;
+		  	color: #1d1d1e;
+		  	border-radius: 25px;
+		  	width: auto;
+		  	float: left;
+		  	padding: 0 15px 0 10px;
+		  	margin: 4px -15px 4px 0px;
+		  	font-size: 20px; 
 		}
 
 		.project-shelf{
@@ -598,22 +610,40 @@
 		}  	
 
 		.card{
-			padding: 30px;
-			width: auto;
-		    max-height: 400px;
-		    width:400px; 
+			padding: 20px 20px 0px 20px;
+			min-width: 300px;
+			max-width: 400px;
 		    height: auto;
+
+		}
+		
+		.card-decker{
+			border: 2px solid black;
 		}
 		.card-img-top{
-			height: 200px;
-			width: 200px;
+			height: 50%;
+			width: 50%;
 			background-size: auto;
 		}
 		.decker{
-			overflow-x: scroll;
 			height: auto;
-			padding: 30px;
+			padding: 50px;
 			align-content: center;
 			position: relative;
+		}
+		@media only screen and (max-device-width: 1366px) {
+			.decker{
+				padding: 20px 0px 20px 0px;
+			}
+			.card{
+				padding: 1px;
+				width: auto;
+			}
+			.card-img-top{
+				padding: 1px;
+			}
+			.project-shelf{
+				position: 1px;
+			}
 		}
 		</style>
