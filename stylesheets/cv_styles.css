@@ -407,7 +407,6 @@
 			  background-color: black;
 				color: white;
 			   border-radius: 25px;
-				width: ;
 				float: center;
 				font-weight: bold;
 		  }
@@ -545,7 +544,7 @@
 		  .school3-info{
 			  background-color: rgb(200,255,255,0.9);
 			  border-radius: 15px;
-			  height: =100%;
+			  height: 100%;
 			  max-width: 300px;
 			  color: black;
 			  font: 17px;
@@ -600,13 +599,7 @@
 				font-size: 20px; 
 		  }
   
-		  .project-shelf{
-			  flex: 25%;
-			  height: auto;
-			  width: auto;
-			  background-size: cover;
-			  display:inline-block;
-		  }  	
+		  
   
 		  .card{
 			  padding: 20px 20px 0px 20px;
