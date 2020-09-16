@@ -1,0 +1,619 @@
+<style type="text/css">
+
+		nav {
+		  white-space: nowrap;
+		  background: #37474F;
+		}
+		nav ul {
+		  list-style: none;
+		  margin: 0;
+		  padding: 0;
+		}
+		/* Only stick if you can fit */
+		@media (min-height: 300px) {
+		  nav ul {
+		    position: sticky;
+		    top: 0;
+		  }
+		}
+		nav ul li a {
+		  display: block;
+		  padding: 0.5rem 1rem;
+		  color: white;
+		  text-decoration: none;
+		}
+		nav ul li a.current {
+		  background: black;
+		}
+		main {
+		  padding-bottom: 40rem;
+		}
+		section {
+		  padding: 2rem;
+		  margin: 0 0 2rem 0;
+		}
+
+		.intro-card{
+			/*background-color: white;*/
+			background-color: rgb(0,0,0); /* Fallback color */
+  			background-color: rgba(0,0,0, 0.7); 
+			color: white;
+			max-width: 500px;
+			padding: 50px;
+			position: absolute;
+		    bottom:0;
+		    
+		    right: 38%;
+		}
+
+		@media only screen and (max-device-width: 1366px) {
+		  .intro-card {
+		    background-attachment: scroll;
+		    width: auto;
+		    position: all;
+		    right: 0;
+		    padding: 30px;
+		}}
+
+		.intro{
+			
+			word-spacing: 1.5;
+			font: 18px/30px Georgia, serif;
+		}
+
+		.namer{
+			max-width: 500px;
+			word-spacing: 1.5;
+			font: 30px/50px Georgia, serif;
+		}
+		
+		.parallax1 {
+		  /* The image used */
+		  background-image: url('IMG_2267.jpg');
+
+		  /* Full height */
+		  height: 100%; 
+
+		  /* Background Blur 
+		  filter: blur(8px);
+  		  -webkit-filter: blur(8px);*/
+
+		  /* Create the parallax scrolling effect */
+		  background-attachment: fixed;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
+
+		/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+		@media only screen and (max-device-width: 1366px) {
+		  .parallax1 {
+		    background-attachment: scroll;
+		    background-image: url('IMG_2266.jpg');
+		}}
+
+		.parallax1-image{
+			background: rgba(255, 255, 255, 0.2); 
+			backdrop-filter: blur(8px); 
+			height: 100vh;
+			width: 62.1%;
+		}
+		@media only screen and (max-device-width: 1366px) {
+		  .parallax1-image {
+		    background-attachment: scroll;
+		    width: 0%;
+		}}
+
+
+		.parallax2 {
+		  /* The image used */
+		  background-image: url('technology-785742_1920.jpg');
+
+		  /* Full height*/ 
+	
+
+		  /* Create the parallax scrolling effect */
+		  background-attachment: fixed;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: auto;
+
+		}
+
+		/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+		@media only screen and (max-device-width: 1366px) {
+		  .parallax2 {
+		    background-attachment: scroll;
+		}}
+
+		.parallax3 {
+		  /* The image used */
+		  background-image: url('paral2.jpg');
+
+		  /* Full height */
+		  height: auto; 
+
+		  /* Background Blur 
+		  filter: blur(8px);
+  		  -webkit-filter: blur(8px);*/
+
+		  /* Create the parallax scrolling effect */
+		  background-attachment: fixed;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size:auto;
+		}
+
+		/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+		@media only screen and (max-device-width: 1366px) {
+		  .parallax3 {
+		    background-attachment: scroll;
+		}}
+		
+		.parallax4 {
+		  /* The image used */
+		  background-image: url('school-backdrop.jpg');
+
+		  height: auto;
+		  /* Background Blur 
+		  filter: blur(8px);
+  		  -webkit-filter: blur(8px);*/
+
+		  /* Create the parallax scrolling effect */
+		  background-attachment: fixed;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size:cover;
+		}
+
+		/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+		@media only screen and (max-device-width: 1366px) {
+		  .parallax4 {
+		    background-attachment: scroll;
+		}}
+
+		.parallax3-image{
+			background: rgba(0, 0, 0, 0.1); 
+			backdrop-filter: blur(2px); 
+			height: auto;
+			width: all;
+		}
+		.ed-image{
+			padding: 30px;
+		}
+		.ed-image:hover{
+			background: rgba(0, 0, 0, 0.1); 
+			backdrop-filter: blur(2px) grayscale(100%); 
+			height: auto;
+			width: all;
+			
+			background-size: absolute;
+			width: 100%;
+  			height: 100%;
+		}
+
+		* {
+		  box-sizing: border-box;
+		  padding: 0%;
+		}
+
+		html {
+		  scroll-behavior: smooth;
+		}
+		
+		/* The actual timeliner (the vertical ruler) */
+		
+
+		body {
+		  background-color: #474e5d;
+		  font-family: Helvetica, sans-serif;
+		  color: white;
+		  width: auto;
+		}
+		body, html {
+  			height: 100%;	
+		}
+
+
+		/* The actual timeliner (the vertical ruler) */
+		.timeliner {
+			padding-bottom: 50px;
+			padding-top: 50px;
+		 	position: relative;
+		  	max-width: 1200px;
+		  	margin: 0 auto;
+		  	color: black;
+		}
+
+		/* The actual timeliner (the vertical ruler) */
+		.timeliner::after {
+		  content: '';
+		  position: absolute;
+		  width: 6px;
+		  background-color: white;
+		  top: 0;
+		  bottom: 0;
+		  left: 50%;
+		  margin-left: -3px;
+		}
+
+		/* containers around content */
+		.containers {
+		  padding: 10px 40px;
+		  position: relative;
+		  background-color: inherit;
+		  width: 50%;
+		}
+
+		/* The circles on the timeliner */
+		.containers::after {
+		  content: '';
+		  position: absolute;
+		  width: 25px;
+		  height: 25px;
+		  right: -12.5px;
+		  background-color: white;
+		  border: 4px solid orange;
+		  top: 15px;
+		  border-radius: 50%;
+		  z-index: 1;
+		}
+
+		/* Place the containers to the left */
+		.lefty {
+		  left: 0;
+		}
+
+		/* Place the containers to the right */
+		.righty {
+		  left: 50%;
+		}
+
+		/* Add arrows to the left containers (pointing right) */
+		.lefty::before {
+		  content: " ";
+		  height: 0;
+		  position: absolute;
+		  top: 22px;
+		  width: 0;
+		  z-index: 1;
+		  right: 30px;
+		  border: medium solid white;
+		  border-width: 10px 0 10px 10px;
+		  border-color: transparent transparent transparent white;
+		}
+
+		/* Add arrows to the right containers (pointing left) */
+		.righty::before {
+		  content: " ";
+		  height: 0;
+		  position: absolute;
+		  top: 22px;
+		  width: 0;
+		  z-index: 1;
+		  left: 30px;
+		  border: medium solid white;
+		  border-width: 10px 10px 10px 0;
+		  border-color: transparent white transparent transparent;
+		}
+
+		/* Fix the circle for containerss on the right side */
+		.righty::after {
+		  left: -12.5px;
+		}
+
+		
+		/* The actual content */
+		.content {
+		  padding: 20px 30px;
+		  background-color: white;
+		  position: relative;
+		  border-radius: 6px;
+		}
+
+		/* Media queries - Responsive timeliner on screens less than 600px wide */
+		@media screen and (max-width: 600px) {
+		  /* Place the timelime to the left */
+		  .timeliner::after {
+		  left: 31px;
+		  }
+		  
+		  /* Full-width containerss */
+		  .containers {
+		  width: 100%;
+		  padding-left: 70px;
+		  padding-right: 25px;
+		  }
+		  
+		  /* Make sure that all arrows are pointing leftwards */
+		  .containers::before {
+		  left: 60px;
+		  border: medium solid white;
+		  border-width: 10px 10px 10px 0;
+		  border-color: transparent white transparent transparent;
+		  }
+
+		  /* Make sure all circles are at the same spot */
+		  .lefty::after, .righty::after {
+		  left: 15px;
+		  }
+		  
+		  /* Make all right containerss behave like the left ones */
+		  .righty {
+		  left: 0%;
+		  }
+		}
+	
+		
+		.foot{
+			background-color: rgb(200,200,200);
+			height:auto; 
+			font:18px/30px Georgia, serif;;
+		}
+
+		.contact-feedback {
+			display: flex;
+  			flex-wrap: wrap;
+			padding: 30px;
+			border-color: rgb(200,211,032);
+			border-width: 2px;
+		}
+
+		.contact-feedback > div {
+		  
+		  text-align: center;
+		}
+
+		.contact {
+			border-radius: 25px;
+			width: auto;
+			background-color: white;
+			padding: 20px;
+			right: 40%;
+			border-color: rgb(200,211,032);
+			border-width: 2px;
+		}
+
+		.feedback {
+			border-radius: 25px;
+			width: auto;
+			background-color: cyan;
+			padding: 20px;
+			right: 40%;
+			left: 40%;
+		}
+
+		.introcolumn {
+		  float: left;
+		  width: 33.33%;
+		  padding: 5px;
+		}
+
+
+		/* Clear floats after image containerss */
+		.introw::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+		
+		@media only screen and (max-device-width: 1366px) {
+		  .introcolumn {
+		    width: 100%;
+		    float: none;
+		    padding: 0;
+		}}
+
+		/* containers for flexboxes */
+		.row1 {
+		    background-color: rgb(0,0,0,.5);		
+		  	padding-top: 10px;
+		  	padding-bottom:  10px;
+		  	color: white;
+
+		}
+		.row2 {
+			display: flex;
+			flex-wrap: wrap;
+			
+
+			height: 600px;
+		    padding:0;
+		    margin:0;
+
+		    top:0;
+		    left:0;
+
+		    width: 100%;
+		    height: 100%;
+		  
+		}
+
+		/* Create four equal columns */
+		.column1 {
+		  
+		  flex: 25%;
+		  transition: transform .3s;
+		  background-size: cover;
+		  
+		  height: auto;
+		 min-height:300px;
+		  width: auto; 
+		  overflow: hidden;
+		}
+
+		.column1:hover {
+    		overflow: hidden;
+		}
+
+
+		/* On screens that are 992px wide or less, go from four columns to two columns */
+		@media screen and (max-width: 992px) {
+		  .column2 {
+		    flex: 50%;
+		  }
+		}
+		.column2 {	
+		  flex: 25%;
+		  transition: transform .3s;
+
+		  background-size: cover;
+		 
+		  height: auto;
+		  width: auto;
+
+		  min-height:300px;
+		}
+
+		.column2:hover {
+		  	overflow: hidden;
+		}
+
+		.column3 {
+			flex: 25%;
+			transition: transform .3s;
+			background-size: cover;
+			
+			height: auto;
+			width: auto;
+			min-height:300px;
+			overflow: hidden;
+		}
+
+		.column3:hover {
+		  overflow: hidden;
+		}
+
+		
+		/* On screens that are 992px wide or less, go from four columns to two columns */
+		@media screen and (max-width: 992px) {
+		  .column3 {
+		    flex: 50%;
+		  }
+		}
+
+		
+		/* On screens that are 992px wide or less, go from four columns to two columns */
+		@media screen and (max-width: 992px) {
+		  .column1 {
+		    flex: 50%;
+		  }
+		}
+
+
+
+		/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+		@media screen and (max-width: 600px) {
+		  .row1 {
+		    flex-direction: column;
+		  }
+		}
+		@media screen and (max-width: 600px) {
+		  .row2 {
+		    flex-direction: column;
+		  }
+		}
+
+		.xml-diagram{
+			
+			background-size: auto;
+			background-position: relative; 
+			background-blend-mode: hue;
+			height: auto;
+			padding-bottom: 2%;
+			padding-top: 2%;
+			position: cover;
+		}
+
+		.mxgraph{
+			background-color: rgb(0,255,255);
+
+		}
+		#mxgraph {
+		  border-radius: 25px;
+		  border: 2px solid #73AD21;
+		  padding: 20px; 
+		  width: 200px;
+		  height: 150px; 
+		}
+
+		.school3-info{
+			background-color: rgb(200,255,255,0.8);
+
+			border-radius: 15px;
+			height: =100%;
+			max-width: 300px;
+			color: black;
+			font: 17px serif;
+			padding: 10px;
+		}
+
+
+		mark{
+		 background-color: rgb(0,0,0,0.8);
+		 color: white;
+		 border-spacing: all;
+		 padding-left: 3px;
+		 padding-right: 3px;
+		 padding-bottom: 5px;
+		 padding-top: 5px; 
+		}	
+
+		p.highlighter-head {
+		  width: 150px;
+		}
+		p.highlighter-subhead {
+		  width: 150px;
+		}
+
+		p.highlighter-head{
+		  background-color: black;
+		  color: white;
+		  border-radius: 25px;
+		  width: auto;
+		  float: left;
+		  font-weight: bold;
+		  padding: 0 15px 0 10px;
+		  margin: 4px -15px 4px 0px;
+		  font-size: 25px;
+		}
+
+		p.highlighter-subhead{
+		  background-color: cyan;
+		  color: #1d1d1e;
+		  border-radius: 25px;
+		  width: auto;
+		  float: left;
+		  padding: 0 15px 0 10px;
+		  margin: 4px -15px 4px 0px;
+		  font-size: 20px; 
+		}
+
+		.project-shelf{
+			flex: 25%;
+			height: auto;
+		    width: auto;
+		    background-size: cover;
+		    display:inline-block;
+		}  	
+
+		.card{
+			padding: 30px;
+			width: auto;
+		    max-height: 400px;
+		    width:400px; 
+		    height: auto;
+		}
+		.card-img-top{
+			height: 200px;
+			width: 200px;
+			background-size: auto;
+		}
+		.decker{
+			overflow-x: scroll;
+			height: auto;
+			padding: 30px;
+			align-content: center;
+			position: relative;
+		}
+		</style>
