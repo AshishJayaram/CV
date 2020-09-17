@@ -82,9 +82,9 @@
 		  }}
   
   
-		  .parallax2 {
+		  .parallax5 {
 			/* The image used */
-			background-image: url('school.png');
+			background-image: url('school3.png');
   
 			/* Full height*/ 
 	  
@@ -100,7 +100,7 @@
   
 		  /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
 		  @media only screen and (max-device-width: 1366px) {
-			.parallax2 {
+			.parallax5 {
 			  background-attachment: scroll;
 			  background-position: center;
 			  background-attachment: fixed;
