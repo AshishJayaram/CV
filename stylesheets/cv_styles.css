@@ -93,7 +93,7 @@
 			background-attachment: fixed;
 			background-position: center;
 			background-repeat: no-repeat;
-			background-size: auto;
+			background-size: 100% 150%;
   
 			font-family: Garamond;
 		  }
@@ -102,6 +102,9 @@
 		  @media only screen and (max-device-width: 1366px) {
 			.parallax2 {
 			  background-attachment: scroll;
+			  background-position: center;
+			  background-attachment: fixed;
+			  background-repeat: no-repeat;
 		  }}
   
 		  .parallax3 {
@@ -129,6 +132,9 @@
 		  @media only screen and (max-device-width: 1366px) {
 			.parallax3 {
 			  background-attachment: scroll;
+			  background-position: center;
+			  background-attachment: fixed;
+			  background-repeat: no-repeat;
 		  }}
 		  
 		  .parallax4 {
@@ -530,9 +536,12 @@
 		  }
   
 		  .boxer{
-			  background-color: rgb(0,0,0,0.5); 
+			  background-color: rgb(0,0,0,0.5);
 			  padding: 10px 20px;
 			  border-radius: 20px 0px;
+		  }
+		  .boxer-image:hover{
+		  	backdrop-filter: blur(8px); 
 		  }
   
 		  .school3-info{
