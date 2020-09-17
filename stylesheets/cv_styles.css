@@ -102,7 +102,7 @@
 		  @media only screen and (max-device-width: 1366px) {
 			.parallax5 {
 			  background-attachment: scroll;
-                          Background-size:auto;
+                          Background-size: 100% 30%;
 		  }}
   
 		  .parallax3 {
