@@ -137,9 +137,6 @@
 		  @media only screen and (max-device-width: 1366px) {
 			.parallax3 {
 			  background-attachment: scroll;
-			  background-position: center;
-			  background-attachment: fixed;
-			  background-repeat: no-repeat;
 		  }}
 		  
 		  .parallax4 {
